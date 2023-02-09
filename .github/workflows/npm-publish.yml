@@ -16,7 +16,7 @@ jobs:
         run: npm install
       
       - name: Test
-        run: npm run wdio
+        run: npm run wdio:firefox
       
       - name: Get Allure history
         uses: actions/checkout@v2
@@ -39,7 +39,7 @@ jobs:
 
       - name: Deploy report to Github Pages
         if: always()
-        uses: peaceiris/actions-gh-pages@v2
+        uses: peaceiris/actions-gh-pages@v3.8.0
         env:
           PERSONAL_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           PUBLISH_BRANCH: gh-pages

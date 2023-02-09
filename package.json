@@ -23,7 +23,8 @@
         "wdio:chrome": "wdio run wdio.conf.chrome.js",
         "wdio:docker":"wdio run wdio.conf.docker.js",
         "allure:serve": "npx allure serve allure-results",
-        "allure:generate": "npx allure generate allure-results --clean && allure open"
+        "allure:generate": "npx allure generate allure-results --clean && allure open",
+        "docker:build":"docker-compose -f ./docker/docker-compose.yml up -d"
     },
     "dependencies": {
         "allure-commandline": "^2.20.1"
