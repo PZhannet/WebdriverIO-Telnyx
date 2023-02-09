@@ -1,11 +1,7 @@
 const {config} = require("./wdio.conf");
-const dockerConfig  = {
+const crossBrowserConfig = {
     ...config,
-    services: [],
-    maxInstances: 1,
-    hostname: 'localhost',
-    port: 4444,
-    path: '/',
+    services: ["selenium-standalone"],
     capabilities: [
         {
           maxInstances: 1,
@@ -24,5 +20,6 @@ const dockerConfig  = {
           },
         }
         ],
+
 };
-exports.config = dockerConfig;
+exports.config = crossBrowserConfig;

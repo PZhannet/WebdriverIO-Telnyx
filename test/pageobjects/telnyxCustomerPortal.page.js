@@ -28,6 +28,7 @@ class TelnyxCustomerPortalPage extends Page {
     get pricingLink(){return $('[id="main_content"] [href="/#/app/pricing"]')}
 
     async clickTollFreeNumbersBtn (){
+        await this.tollFreeNumbersBtn.waitForExist({ timeout: 20000 })
         await this.tollFreeNumbersBtn.click()
         await expect(this.searchNumbersBtn).toBeClickable()
         await expect(this.labelsCountryCodeAndAreaCodeAndPhoneNumber).toBeDisplayed()
@@ -51,6 +52,7 @@ class TelnyxCustomerPortalPage extends Page {
         await expect(this.numberInTheCart).toHaveText(number);
     }
     async clickHomeLink(){
+        await this.homeLink.waitForExist({ timeout: 10000 })
         await this.homeLink.click()
         await expect(this.homeTitle).toBeDisplayed()
         await expect(this.welcomeToYourMissionControlPortalSection).toBeDisplayed()
@@ -66,6 +68,7 @@ class TelnyxCustomerPortalPage extends Page {
         await expect(this.developersPageIcon).toBeDisplayed()
     }
     async clickVideoLink(){
+        await this.videoLink.waitForExist({ timeout: 10000 })
         await this.videoLink.click();
         await expect(browser).toHaveTitle('Video Rooms / Telnyx Customer Portal')
     }
@@ -74,6 +77,7 @@ class TelnyxCustomerPortalPage extends Page {
         await expect(browser).toHaveTitle('Demo App / Telnyx Customer Portal')
     }
     async clickPricingLink(title){
+        await this.pricingLink.waitForExist({ timeout: 10000 })
         await this.pricingLink.click()
         await expect(browser).toHaveTitle(title)
     }

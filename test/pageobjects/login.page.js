@@ -17,25 +17,11 @@ class LoginPage extends Page{
         await expect(browser).toHaveTitle(title)
     }
     async clickLoginWithMicrosoftBtn(title){
+        await this.loginWithMicrosoftBtn.waitForExist({ timeout: 20000 })
         await this.loginWithMicrosoftBtn.click()
         await this.switchActiveWindow(title)
         await expect(browser).toHaveTitle(title)
     }
-    //async clickLoginBtn(){
-       // await this.loginBtn.click()
-    //}
-    /*get tryForFreeButton() {
-        return $('main button[type="submit"]');
-    }
-    get startYourFreeTrialLink() {
-        return $('main div:last-child a[href="/sign-up"]');
-    }    
-    async clickTryForFreeButton() {
-        await this.tryForFreeButton.click();
-    }    
-    async clickStartYourFreeTrialLink(){
-        await this.startYourFreeTrialLink.click();
-    }*/
 }
 
 module.exports = new LoginPage()

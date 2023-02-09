@@ -18,7 +18,7 @@
         "wdio-docker-service": "^3.2.1"
     },
     "scripts": {
-        "wdio": "npm run wdio:firefox && npm run wdio:chrome",
+        "wdio": "wdio run wdio.conf.cross-browser.js",
         "wdio:firefox": "wdio run wdio.conf.firefox.js",
         "wdio:chrome": "wdio run wdio.conf.chrome.js",
         "wdio:docker":"wdio run wdio.conf.docker.js",
