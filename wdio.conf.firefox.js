@@ -5,9 +5,9 @@ const firefoxHeadlessConfig = {
     capabilities: [{
         maxInstances: 1,
         browserName: "firefox",
-        /*'moz:firefoxOptions': {
+        'moz:firefoxOptions': {
             args: ['--headless']
-        },*/
+        },
     }],
 
 };
