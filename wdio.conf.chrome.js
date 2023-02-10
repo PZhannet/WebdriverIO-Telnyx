@@ -5,9 +5,9 @@ const chromeHeadlessConfig = {
     capabilities: [{
         maxInstances: 1,
         browserName: "chrome",
-        /*'goog:chromeOptions': {
+        'goog:chromeOptions': {
             args: ['--headless']
-        },*/
+        },
     }],
     
 };
