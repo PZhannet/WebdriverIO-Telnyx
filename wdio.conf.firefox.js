@@ -3,11 +3,11 @@ const firefoxHeadlessConfig = {
     ...config,
     services: ["selenium-standalone"],
     capabilities: [{
-        maxInstances: 2,
+        maxInstances: 1,
         browserName: "firefox",
-        'moz:firefoxOptions': {
+        /*'moz:firefoxOptions': {
             args: ['--headless']
-        },
+        },*/
     }],
 
 };

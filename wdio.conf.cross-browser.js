@@ -1,23 +1,23 @@
 const {config} = require("./wdio.conf");
 const crossBrowserConfig = {
     ...config,
-    services: ["selenium-standalone"],
+    services: ["chromedriver","selenium-standalone"],
     capabilities: [
         {
-          maxInstances: 1,
+          maxInstances: 2,
           browserName: 'chrome',
           acceptInsecureCerts: true,
-          'goog:chromeOptions': {
+         /* 'goog:chromeOptions': {
             args: ['--headless', '--no-sandbox']
-          },
+          },*/
         },
         {
-          maxInstances: 1,
+          maxInstances: 2,
           browserName: 'firefox',
           acceptInsecureCerts: true,
-          'moz:firefoxOptions': {
+          /*'moz:firefoxOptions': {
             args: ['--headless']
-          },
+          },*/
         }
         ],
 

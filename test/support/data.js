@@ -12,6 +12,8 @@ module.exports = {
     titleDevelopersPage: 'Telnyx Developers',
     titleCookiePolicyPage: 'Detailed information on the cookie policy at Telnyx',
     titleTwitterPage: 'Telnyx (@telnyx) / Twitter',
+    titleVideoRoomsPage: 'Video Rooms / Telnyx Customer Portal',
+    titleDemoAppPage: 'Demo App / Telnyx Customer Portal',
     validEmailForLogin: 'testtestunia@gmail.com',
     validPasswordForLogin: 'qwertyU789!!',
     invalidWebhookURL: 'Invalid',
@@ -22,4 +24,5 @@ module.exports = {
     lessCharacterPassword: '123', 
     addCharactersInPassword: '12345678910',
     number: '(888) 980 9750'
+    
 }

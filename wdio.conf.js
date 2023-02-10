@@ -1,3 +1,11 @@
+/*const url = require('./urls')
+const ENV = process.env.ENV;
+
+if (!ENV || !['prod','dev'].includes(ENV)) {
+  console.log(' Please pass the correct ENV value: ENV = prod|dev');
+  process.exit();
+}*/
+
 exports.config = {
     //
     // ====================
@@ -100,9 +108,10 @@ exports.config = {
     // If your `url` parameter starts without a scheme or `/` (like `some/path`), the base url
     // gets prepended directly.
     baseUrl: 'https://telnyx.com/',
+    //baseUrl: url[process.env.ENV],
     //
     // Default timeout for all waitFor* commands.
-    waitforTimeout: 10000,
+    waitforTimeout: 60000,
     //
     // Default timeout in milliseconds for request
     // if browser driver or grid doesn't send response

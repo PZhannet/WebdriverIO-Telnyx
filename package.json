@@ -19,7 +19,7 @@
     },
     "scripts": {
         "wdio": "wdio run wdio.conf.cross-browser.js",
-        "wdio:firefox": "wdio run wdio.conf.firefox.js",
+        "wdio:firefox": "npx wdio run wdio.conf.firefox.js",
         "wdio:chrome": "wdio run wdio.conf.chrome.js",
         "wdio:docker":"wdio run wdio.conf.docker.js",
         "allure:serve": "npx allure serve allure-results",

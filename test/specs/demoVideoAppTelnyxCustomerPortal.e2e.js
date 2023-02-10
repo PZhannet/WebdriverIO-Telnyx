@@ -12,8 +12,8 @@ describe('Testing the Demo Video App page', () => {
         await login.login(data.validEmailForLogin,data.validPasswordForLogin)
     })
     it('ID 7 Check the ability to create Video Room with an invalid URL on the Demo Video App page', async ()=>{
-        await telnyxCustomerPortalPage.clickVideoLink()
-        await telnyxCustomerPortalPage.clickTryTheDemoAppBtn()
+        await telnyxCustomerPortalPage.clickVideoLink(data.titleVideoRoomsPage)
+        await telnyxCustomerPortalPage.clickTryTheDemoAppBtn(data.titleDemoAppPage)
         await demoVideoAppPageTelnyxCustomerPortalPage.enterWebhookURLInput(data.invalidWebhookURL)
         await demoVideoAppPageTelnyxCustomerPortalPage.enterRoomNameInput(data.videoRoomName)
         await demoVideoAppPageTelnyxCustomerPortalPage.checkErrorUrlMessage()

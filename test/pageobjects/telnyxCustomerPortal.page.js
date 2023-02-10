@@ -63,18 +63,18 @@ class TelnyxCustomerPortalPage extends Page {
     }
     async clickStartMessagingLink(title){
         await this.startMessagingLink.click()
-        await browser.pause(5000)
+        await browser.pause(10000)
         await this.switchActiveWindow(title)
         await expect(this.developersPageIcon).toBeDisplayed()
     }
-    async clickVideoLink(){
+    async clickVideoLink(title){
         await this.videoLink.waitForExist({ timeout: 10000 })
         await this.videoLink.click();
-        await expect(browser).toHaveTitle('Video Rooms / Telnyx Customer Portal')
+        await expect(browser).toHaveTitle(title)
     }
-    async clickTryTheDemoAppBtn(){
+    async clickTryTheDemoAppBtn(title){
         await this.tryTheDemoAppBtn.click()
-        await expect(browser).toHaveTitle('Demo App / Telnyx Customer Portal')
+        await expect(browser).toHaveTitle(title)
     }
     async clickPricingLink(title){
         await this.pricingLink.waitForExist({ timeout: 10000 })

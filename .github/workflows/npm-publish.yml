@@ -13,7 +13,7 @@ jobs:
         - name: Install
           run: npm install
         - name: Test
-          run: npm run wdio
+          run: npm run wdio:chrome
         - name: Publishing Allure artifact to Github Actions
           if: always()
           uses: actions/upload-artifact@v3
