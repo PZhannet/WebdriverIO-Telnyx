@@ -16,37 +16,37 @@
 ## Usage
 - To run tests in headless mode in Chrome and Firefox browsers:  
 ```sh
-ENV=prod|dev npm run wdio `#E9FCD3`
+ENV=prod|dev npm run wdio  
 ```
 - To run tests in headless mode in Chrome browser:  
 ```sh
-ENV=prod|dev npm run wdio:chrome `#E9FCD3`
+ENV=prod|dev npm run wdio:chrome  
 ```
 - To run tests in headless mode in Firefox browser:  
 ```sh
-ENV=prod|dev npm run wdio:firefox `#E9FCD3`
+ENV=prod|dev npm run wdio:firefox  
 ```
 - To run single test in headless mode in Chrome browser:  
 ```sh
-ENV=prod|dev  npx wdio run ./wdio.conf.chrome.js --spec ./test/specs/{name}.e2e.js `#E9FCD3`
+ENV=prod|dev  npx wdio run ./wdio.conf.chrome.js --spec ./test/specs/{name}.e2e.js  
 ```
 - To run single test in headless mode in Firefox browser:  
 ```sh
-ENV=prod|dev npx wdio run ./wdio.conf.firefox.js --spec ./test/specs/{name}.e2e.js `#E9FCD3`
+ENV=prod|dev npx wdio run ./wdio.conf.firefox.js --spec ./test/specs/{name}.e2e.js  
 ```
 - Generate and open allure report:  
 ```sh
-npm run allure:generate `#E9FCD3`
+npm run allure:generate  
 ```
 
 ## Run tests in Docker
 - Build image:  
 ```sh
-npm run docker:build `#E9FCD3`
+npm run docker:build  
 ```
 - Run container:  
 ```sh
-ENV=prod|dev npm run wdio:docker `#E9FCD3`
+ENV=prod|dev npm run wdio:docker  
 ```
 ## GitHub Pages:
 
