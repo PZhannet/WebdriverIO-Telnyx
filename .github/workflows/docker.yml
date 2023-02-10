@@ -19,4 +19,4 @@ jobs:
     - name: Install
       run: npm ci
     - name: Run tests
-      run: npm run wdio:docker
+      run: ENV=dev npm run wdio:docker

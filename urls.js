@@ -1,4 +1,4 @@
 module.exports = {
     prod: 'https://telnyx.com/',
-    dev: 'localhost'
+    dev: 'https://telnyx.com/'
 }

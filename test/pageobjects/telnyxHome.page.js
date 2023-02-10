@@ -14,7 +14,7 @@ class TelnyxHomePage extends Page {
     get talkToAnExpertLink(){return $('[href="/contact-us"][class*="sc-f97529d6-0"]')}
     get exploreWirelessLink(){return $('[href*="iot-sim-card"] [class*="edVhEG"]')}
     open () {
-        return super.open('');
+        return super.open('https://telnyx.com/');
     }
     async clickAcceptAndCloseBtn(){
         if(this.acceptAndCloseBtn.isExisting()){

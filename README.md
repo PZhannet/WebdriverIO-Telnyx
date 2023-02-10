@@ -1,4 +1,4 @@
-# # **WebdriverIo + Docker + Allure Report** :four_leaf_clover:
+# :four_leaf_clover: **WebdriverIo + Docker + Allure Report** :four_leaf_clover:
 ## Project description
 - Created 20 tests in WebdriverIO for testing the Telnyx website: https://telnyx.com/
 
@@ -16,37 +16,37 @@
 ## Usage
 - To run tests in headless mode in Chrome and Firefox browsers:  
 ```sh
-npm run wdio
+ENV=prod|dev npm run wdio `E9FCD3`
 ```
 - To run tests in headless mode in Chrome browser:  
 ```sh
-npm run wdio:chrome
+ENV=prod|dev npm run wdio:chrome `E9FCD3`
 ```
 - To run tests in headless mode in Firefox browser:  
 ```sh
-npm run wdio:firefox
+ENV=prod|dev npm run wdio:firefox `E9FCD3`
 ```
 - To run single test in headless mode in Chrome browser:  
 ```sh
-npx wdio run ./wdio.conf.chrome.js --spec ./test/specs/{name}.e2e.js
+ENV=prod|dev  npx wdio run ./wdio.conf.chrome.js --spec ./test/specs/{name}.e2e.js `E9FCD3`
 ```
 - To run single test in headless mode in Firefox browser:  
 ```sh
-npx wdio run ./wdio.conf.firefox.js --spec ./test/specs/{name}.e2e.js
+ENV=prod|dev npx wdio run ./wdio.conf.firefox.js --spec ./test/specs/{name}.e2e.js `E9FCD3`
 ```
 - Generate and open allure report:  
 ```sh
-npm run allure:generate
+npm run allure:generate `E9FCD3`
 ```
 
 ## Run tests in Docker
 - Build image:  
 ```sh
-npm run docker:build 
+npm run docker:build `E9FCD3`
 ```
 - Run container:  
 ```sh
-npm run wdio:docker
+ENV=prod|dev npm run wdio:docker `E9FCD3`
 ```
 ## GitHub Pages:
 
