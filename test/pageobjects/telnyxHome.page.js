@@ -14,7 +14,7 @@ class TelnyxHomePage extends Page {
     get talkToAnExpertLink(){return $('[href="/contact-us"][class*="sc-f97529d6-0"]')}
     get exploreWirelessLink(){return $('[href*="iot-sim-card"] [class*="edVhEG"]')}
     open () {
-        return super.open('https://telnyx.com/');
+        return super.open('');
     }
     async clickAcceptAndCloseBtn(){
         if(this.acceptAndCloseBtn.isExisting()){
@@ -24,7 +24,9 @@ class TelnyxHomePage extends Page {
     async clickLoginBtn(title){
         await this.loginBtn.waitForExist({ timeout: 10000 })
         await this.loginBtn.click();
-        await browser.pause(10000)
+        setTimeout(async function () {
+            await browser.toHaveUrlContaining('/sign-in')
+          }, 10000);
         await this.switchActiveWindow(title)
         await expect(browser).toHaveTitle(title)
     }

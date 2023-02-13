@@ -28,11 +28,11 @@ ENV=prod|dev npm run wdio:firefox
 ```
 - To run single test in headless mode in Chrome browser:  
 ```sh
-ENV=prod|dev  npx wdio run ./wdio.conf.chrome.js --spec ./test/specs/{name}.e2e.js  
+ENV=prod|dev  npx wdio run ./wdio.conf.chrome.js --spec ./config/test/specs/{name}.e2e.js  
 ```
 - To run single test in headless mode in Firefox browser:  
 ```sh
-ENV=prod|dev npx wdio run ./wdio.conf.firefox.js --spec ./test/specs/{name}.e2e.js  
+ENV=prod|dev npx wdio run ./config/wdio.conf.firefox.js --spec ./test/specs/{name}.e2e.js  
 ```
 - Generate and open allure report:  
 ```sh

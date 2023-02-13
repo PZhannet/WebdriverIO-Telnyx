@@ -1,6 +1,6 @@
 const telnyxHomePage = require('../pageobjects/telnyxHome.page');
 const login = require('../pageobjects/login.page')
-const portalTelnyxPage = require('../pageobjects/telnyxCustomerPortal.page')
+const telnyxCustomerPortalPage = require('../pageobjects/telnyxCustomerPortal.page')
 const pricingTelnyxCustomerPortalPage = require('../pageobjects/pricingTelnyxCustomerPortal.page')
 const data =require('../support/data')
 
@@ -12,7 +12,7 @@ describe('Testing the Pricing page', () => {
         await login.login(data.validEmailForLogin,data.validPasswordForLogin)
     })
     it('ID 8 Сheck that the marks on a slider on Pricing Tier Control in the Outbound (Termination) Voice/Fax Usage section correspond right button  on the Pricing page', async ()=>{
-        await portalTelnyxPage.clickPricingLink(data.titlePricingPage)
+        await telnyxCustomerPortalPage.clickPricingLink(data.titlePricingPage)
         await browser.pause(5000)
         await pricingTelnyxCustomerPortalPage.clickOnPointsSlider()
     })
